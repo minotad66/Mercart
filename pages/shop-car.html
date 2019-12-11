@@ -9,7 +9,7 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title>Mercart</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../css/styles.css'>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
     integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -41,7 +41,7 @@
     <!-- Sidebar -->
     <div id="menu" class="border-right" id="sidebar-wrapper" style="width: 15em;">
       <div class="list-group list-group-flush">
-        <a href="#header" class="list-group-item list-group-item-action options">Camisetas</a>
+        <a href="../index.html" class="list-group-item list-group-item-action options">Camisetas</a>
         <a href="#" class="list-group-item list-group-item-action options">Jeans</a>
         <a href="#" class="list-group-item list-group-item-action options">Tenis</a>
       </div>
@@ -49,51 +49,36 @@
     <!-- /#sidebar-wrapper -->
 
     <!--contenido-->
-    <div id="page-content-wrapper">
-      <article class="m-4 p-5">
-        <div class="card-deck">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="img/camiseta_node.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Camiseta node white</h5>
-              <p class="card-text">100 % algodon</p>
-              <a onclick="product1()" href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
 
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="img/camiseta_cod.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Camiseta de Call Of Duty</h5>
-              <p class="card-text">100 % algodon</p>
-              <a onclick="product2()" href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="img/camiseta_js.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Camiseta JavaScript</h5>
-              <p class="card-text">100 % algodon</p>
-              <a onclick="product3()" href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-      </article>
-    </div>
-    <!-- compras -->
-    <div class="card m-5 scroller" style="width: 15em;">
-      <div class="card-body">
-        <h6 class="card-title">Lista de compras</h6>
-        <div id="compra">
-
-        </div>
-        <div class="precios">
-
-        </div>
-        <div class="coverShop">
-          <a href="pages/shop-car.html" type="button" class="btn btn-primary shopAll">Comprar todo</a>
+    <img src="../img/thank.jpg" style="width: 500px;" class="img-fluid m-5" alt="Responsive image">
+    <form id="form" class="m-5 p-3">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Correo</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
         </div>
       </div>
-    </div>
+      <div class="form-group">
+        <label for="inputAddress">Direccion</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Ciudad</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">Departamento</label>
+          <input type="text" class="form-control" id="inputCity">
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+        </div>
+      </div>
+      <button id="endShop" class="btn btn-primary">Pagar y enviar</button>
+    </form>
 
   </div>
 
@@ -104,7 +89,10 @@
 
   </footer>
   ​
-  <script src='js/main.js'></script>
+  <!-- <script src='../js/main.js'></script> -->
+
+  <script src="../js/main.js" language="javascript" type="text/javascript"></script>
+
 </body>
 
 </html>
