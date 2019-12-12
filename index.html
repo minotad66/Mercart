@@ -1,110 +1,140 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-
-  <meta charset='utf-8'>
-
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Mercart</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
   <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
     integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 </head>
 
+
 <body>
-  <header>
-    <nav id="header" class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand logo" href="/index.html"><i class="fas fa-shopping-basket fa-lg"></i> Mercart</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="four columns">
+                    <a class="navbar-brand logo" href="/index.html"><i class="fas fa-shopping-basket fa-lg"></i> Mercart</a>
+                </div>
+                <div class="two columns u-pull-right">
+                    <ul>
+                        <li class="submenu">
+                            <img src="img/cart.png" id="img-carrito">
+                            <div id="carrito">
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <table id="lista-carrito" class="u-full-width">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
 
-        <form class="form-inline my-2 my-lg-0">
-          <input class="ml-5 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="searchBtn my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </nav>
-  </header>
-
-
-  <div class="d-flex" id="wrapper">
-    <!-- Sidebar -->
-    <div id="menu" class="border-right" id="sidebar-wrapper" style="width: 15em;">
-      <div class="list-group list-group-flush">
-        <a href="#header" class="list-group-item list-group-item-action options">Camisetas</a>
-        <a href="#" class="list-group-item list-group-item-action options">Jeans</a>
-        <a href="#" class="list-group-item list-group-item-action options">Tenis</a>
-      </div>
-    </div>
-    <!-- /#sidebar-wrapper -->
-
-    <!--contenido-->
-    <div id="page-content-wrapper">
-      <article class="m-4 p-5">
-        <div class="card-deck">
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="img/camiseta_node.jpeg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Camiseta node white</h5>
-              <p class="card-text">100 % algodon</p>
-              <a onclick="product1()" href="#" class="btn btn-primary">Comprar</a>
+                                <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </div>
+    </header> -->
+    <header>
+        <nav id="header" class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand logo" href="/index.html"><i class="fas fa-shopping-basket fa-lg"></i> Mercart</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+            <form class="form-inline my-2 my-lg-0">
+              <input class="ml-5 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="searchBtn my-2 my-sm-0" type="submit">Search</button>
+            </form>
           </div>
+          <div class="two columns u-pull-right">
+            <ul>
+                <li class="submenu">
+                    <img src="img/cart.png" id="img-carrito">
+                    <div id="carrito">
+    
+                        <table id="lista-carrito" class="u-full-width">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                        <div class="precios"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </nav>
+      </header>
 
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="img/camiseta_cod.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Camiseta de Call Of Duty</h5>
-              <p class="card-text">100 % algodon</p>
-              <a onclick="product2()" href="#" class="btn btn-primary">Comprar</a>
+
+    <div id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                    <div class="contenido-hero">
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="img/camiseta_js.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Camiseta JavaScript</h5>
-              <p class="card-text">100 % algodon</p>
-              <a onclick="product3()" href="#" class="btn btn-primary">Comprar</a>
+        </div>
+    </div>
+
+    <div id="lista-cursos">
+        <article class="d-flex flex-wrap repos-wrap">
+
+        </article>
+    </div>
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="four columns">
+                    <nav id="principal" class="menu">
+                        <a class="enlace" href="#">Para tu Negocio</a>
+                        <a class="enlace" href="#">Conviertete en Instructor</a>
+                        <a class="enlace" href="#">Aplicaciones Móviles</a>
+                        <a class="enlace" href="#">Soporte</a>
+                        <a class="enlace" href="#">Temas</a>
+                    </nav>
+                </div>
+                <div class="four columns">
+                    <nav id="secundaria" class="menu">
+                        <a class="enlace" href="#">¿Quienes Somos?</a>
+                        <a class="enlace" href="#">Empleo</a>
+                        <a class="enlace" href="#">Blog</a>
+                    </nav>
+                </div>
             </div>
-          </div>
-      </article>
-    </div>
-    <!-- compras -->
-    <div class="card m-5 scroller" style="width: 15em;">
-      <div class="card-body">
-        <h6 class="card-title">Lista de compras</h6>
-        <div id="compra">
-
         </div>
-        <div class="precios">
+    </footer>
 
-        </div>
-        <div class="coverShop">
-          <a href="pages/shop-car.html" type="button" class="btn btn-primary shopAll">Comprar todo</a>
-        </div>
-      </div>
-    </div>
+    <script src="js/app.js"></script>
 
-  </div>
-
-  <!-- Footer -->
-  <footer class="page-footer">
-    <div class="footer-copyright m-2 p-5"><i class="fas fa-shopping-basket"></i> Mercart © 2019 Copyright</div>
-  </footer>
-
-  </footer>
-  ​
-  <script src='js/main.js'></script>
 </body>
 
 </html>
