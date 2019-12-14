@@ -4,6 +4,7 @@ const cursos = document.getElementById("lista-cursos");
 const listaCursos = document.querySelector("#lista-carrito tbody");
 const vaciarCarritoBtn = document.getElementById("vaciar-carrito");
 const compras = document.querySelector(".precios");
+const comprar = document.querySelector('#comprar')
 let total = 0;
 
 const repoWrap = document.querySelector(".repos-wrap");
@@ -208,8 +209,6 @@ function insertarCarrito(curso) {
 }
 // Elimina el curso del carrito en el DOM
 function eliminarCurso(e) {
-  e.preventDefault();
-
   let curso, cursoId;
   if (e.target.classList.contains("borrar-curso")) {
     e.target.parentElement.parentElement.remove();
@@ -269,6 +268,7 @@ function obtenerCursosLocalStorage() {
   } else {
     cursosLS = JSON.parse(localStorage.getItem("cursos"));
   }
+  
   return cursosLS;
 }
 
@@ -279,7 +279,7 @@ function leerLocalStorage() {
   let totalLS = obtenerTotalLocalStorage();
   compras.innerHTML = `sub total: ${totalLS}`;
   cursosLS = obtenerCursosLocalStorage();
-
+  comprar.innerHTML = `<a href="/shopcar.html" class="button u-full-width">comprar</a>`;
   cursosLS.forEach(function(curso) {
     // constrir el template
     const row = document.createElement("tr");
